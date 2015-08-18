@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7362D23C-79E1-48CE-8FE2-32529D598696}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LocalBikesPlatform_Fall14</RootNamespace>
+    <AssemblyName>LocalBikesPlatform_Fall14</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounting\Accounting_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Accounting_Main.Designer.cs">
+      <DependentUpon>Accounting_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\Account_Payable_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\Account_Payable_Main.Designer.cs">
+      <DependentUpon>Account_Payable_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\Account_Payable_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\Account_Payable_Template.Designer.cs">
+      <DependentUpon>Account_Payable_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\DisplaySelectedObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\DisplaySelectedObject.Designer.cs">
+      <DependentUpon>DisplaySelectedObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\ListObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Account_Payable\ListObjects.Designer.cs">
+      <DependentUpon>ListObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocDetailItem.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Form0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form0.designer.cs">
+      <DependentUpon>Form0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenDoc.cs" />
+    <Compile Include="HAWK_Template_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HAWK_Template_1.designer.cs">
+      <DependentUpon>HAWK_Template_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HAWK_Template_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HAWK_Template_2.designer.cs">
+      <DependentUpon>HAWK_Template_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HAWK_Template_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HAWK_Template_3.designer.cs">
+      <DependentUpon>HAWK_Template_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResources\Hr_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanResources\Hr_Main.Designer.cs">
+      <DependentUpon>Hr_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdentityObject.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewApplication\NewApplication_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewApplication\NewApplication_Main.Designer.cs">
+      <DependentUpon>NewApplication_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewApplication\NewApplication_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewApplication\NewApplication_Template.Designer.cs">
+      <DependentUpon>NewApplication_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\Payroll_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\Payroll_Main.Designer.cs">
+      <DependentUpon>Payroll_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll\Payroll_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll\Payroll_Template.Designer.cs">
+      <DependentUpon>Payroll_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesAndMarketing\SalesAndMarketing_template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAndMarketing\SalesAndMarketing_template.Designer.cs">
+      <DependentUpon>SalesAndMarketing_template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAndMarketing\SalesAndMarketing_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAndMarketing\SalesAndMarketing_Main.Designer.cs">
+      <DependentUpon>SalesAndMarketing_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Authorize.cs" />
+    <Compile Include="UtilityFunctions\Customers\Customer.cs" />
+    <Compile Include="UtilityFunctions\Customers\Customers_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Customers\Customers_Template.Designer.cs">
+      <DependentUpon>Customers_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Customers\Customer_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Customers\Customer_List.designer.cs">
+      <DependentUpon>Customer_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Customers\DisplayCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Customers\DisplayCustomer.Designer.cs">
+      <DependentUpon>DisplayCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\DataStructures\DataBaseUtility.cs" />
+    <Compile Include="UtilityFunctions\Documents\ChangeDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\ChangeDocument.designer.cs">
+      <DependentUpon>ChangeDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\DisplaySelectedObject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\DisplaySelectedObject.designer.cs">
+      <DependentUpon>DisplaySelectedObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\Documents_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\Documents_Main.Designer.cs">
+      <DependentUpon>Documents_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\Document_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\Document_Template.Designer.cs">
+      <DependentUpon>Document_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\ListObjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\ListObjects.designer.cs">
+      <DependentUpon>ListObjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\SimpleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Documents\SimpleList.Designer.cs">
+      <DependentUpon>SimpleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\CreateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\CreateEmployee.Designer.cs">
+      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\DisplayEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\DisplayEmployee.designer.cs">
+      <DependentUpon>DisplayEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\Employee.cs" />
+    <Compile Include="UtilityFunctions\Employees\Employees_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\Employees_List.designer.cs">
+      <DependentUpon>Employees_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\Employees_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\Employees_Main.designer.cs">
+      <DependentUpon>Employees_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\Employees_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Employees\Employees_Template.Designer.cs">
+      <DependentUpon>Employees_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Infrastructure_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Infrastructure_Main.Designer.cs">
+      <DependentUpon>Infrastructure_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\DisplayProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\DisplayProcess.designer.cs">
+      <DependentUpon>DisplayProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\Process.cs" />
+    <Compile Include="UtilityFunctions\Processes\Processes_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\Processes_Main.Designer.cs">
+      <DependentUpon>Processes_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\Process_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\Process_List.designer.cs">
+      <DependentUpon>Process_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\Process_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Processes\Process_Template.Designer.cs">
+      <DependentUpon>Process_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\DisplayProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\DisplayProduct.designer.cs">
+      <DependentUpon>DisplayProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\Product.cs" />
+    <Compile Include="UtilityFunctions\Products\Products_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\Products_List.designer.cs">
+      <DependentUpon>Products_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\Products_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\Products_Main.Designer.cs">
+      <DependentUpon>Products_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\Products_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Products\Products_Template.Designer.cs">
+      <DependentUpon>Products_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Search_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Search_Database.Designer.cs">
+      <DependentUpon>Search_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\DisplaySupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\DisplaySupplier.designer.cs">
+      <DependentUpon>DisplaySupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\Supplier.cs" />
+    <Compile Include="UtilityFunctions\Suppliers\Suppliers_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\Suppliers_List.designer.cs">
+      <DependentUpon>Suppliers_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\Suppliers_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\Suppliers_Main.Designer.cs">
+      <DependentUpon>Suppliers_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\Suppliers_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilityFunctions\Suppliers\Suppliers_Template.Designer.cs">
+      <DependentUpon>Suppliers_Template.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accounting\Accounting_Main.resx">
+      <DependentUpon>Accounting_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Account_Payable\Account_Payable_Main.resx">
+      <DependentUpon>Account_Payable_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Account_Payable\Account_Payable_Template.resx">
+      <DependentUpon>Account_Payable_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Account_Payable\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Account_Payable\ListObjects.resx">
+      <DependentUpon>ListObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form0.resx">
+      <DependentUpon>Form0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HAWK_Template_1.resx">
+      <DependentUpon>HAWK_Template_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HAWK_Template_2.resx">
+      <DependentUpon>HAWK_Template_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HAWK_Template_3.resx">
+      <DependentUpon>HAWK_Template_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanResources\Hr_Main.resx">
+      <DependentUpon>Hr_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewApplication\NewApplication_Main.resx">
+      <DependentUpon>NewApplication_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewApplication\NewApplication_Template.resx">
+      <DependentUpon>NewApplication_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\Payroll_Main.resx">
+      <DependentUpon>Payroll_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll\Payroll_Template.resx">
+      <DependentUpon>Payroll_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SalesAndMarketing\SalesAndMarketing_Main.resx">
+      <DependentUpon>SalesAndMarketing_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Customers\Customers_Template.resx">
+      <DependentUpon>Customers_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Customers\Customer_List.resx">
+      <DependentUpon>Customer_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Customers\DisplayCustomer.resx">
+      <DependentUpon>DisplayCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Documents\ChangeDocument.resx">
+      <DependentUpon>ChangeDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Documents\DisplaySelectedObject.resx">
+      <DependentUpon>DisplaySelectedObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Documents\Document_Template.resx">
+      <DependentUpon>Document_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Documents\ListObjects.resx">
+      <DependentUpon>ListObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Documents\SimpleList.resx">
+      <DependentUpon>SimpleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Employees\CreateEmployee.resx">
+      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Employees\DisplayEmployee.resx">
+      <DependentUpon>DisplayEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Employees\Employees_List.resx">
+      <DependentUpon>Employees_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Employees\Employees_Main.resx">
+      <DependentUpon>Employees_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Employees\Employees_Template.resx">
+      <DependentUpon>Employees_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Infrastructure_Main.resx">
+      <DependentUpon>Infrastructure_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Processes\DisplayProcess.resx">
+      <DependentUpon>DisplayProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Processes\Process_List.resx">
+      <DependentUpon>Process_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Processes\Process_Template.resx">
+      <DependentUpon>Process_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Products\DisplayProduct.resx">
+      <DependentUpon>DisplayProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Products\Products_List.resx">
+      <DependentUpon>Products_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Products\Products_Main.resx">
+      <DependentUpon>Products_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Products\Products_Template.resx">
+      <DependentUpon>Products_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Search_Database.resx">
+      <DependentUpon>Search_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Suppliers\DisplaySupplier.resx">
+      <DependentUpon>DisplaySupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Suppliers\Suppliers_List.resx">
+      <DependentUpon>Suppliers_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Suppliers\Suppliers_Main.resx">
+      <DependentUpon>Suppliers_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilityFunctions\Suppliers\Suppliers_Template.resx">
+      <DependentUpon>Suppliers_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="mysql-connector-net-6.8.3.msi" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImportDefaultwinexe.csproj.user" />
+    <Content Include="LBI_logo.bmp" />
+    <Content Include="LBI_logo.png" />
+    <Content Include="UtilityFunctions\AppDisplaySelectedObject.cs.txt" />
+    <Content Include="UtilityFunctions\AppListModule_Template.cs.txt" />
+    <Content Include="UtilityFunctions\AppModules_Template_List_Specific.cs.txt" />
+    <Content Include="UtilityFunctions\Documents\GenDoc.cs.txt" />
+    <Content Include="UtilityFunctions\NewAppModule_Template.cs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
